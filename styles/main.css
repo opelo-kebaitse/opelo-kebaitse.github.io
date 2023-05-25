@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  /* This line sets the box-sizing property for all elements to border-box,
+     ensuring that padding and border are included in the element's total width and height. */
 }
 
 body {
@@ -7,22 +9,42 @@ body {
   background-image: url(../images/blue-wallpaper.avif);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   font-family: serif;
+/* The following lines are new and modify the behavior and styling of the body element: */
+  margin: 0; /* Resets the margin to 0. */
+  display: flex; /* Sets the display property to flex, allowing flexible positioning of child elements. */
+  flex-direction: column; /* Sets the flex-direction property to column, arranging child elements vertically. */
+  min-height: 100vh; /* Sets the minimum height of the body to 100% of the viewport height. */
+  align-items: center; /* Centers child elements horizontally. */
+  justify-content: center; /* Centers child elements vertically. */
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  /* The following lines are new and modify the behavior and styling of the navigation element: */
+  position: fixed; /* Fixes the position of the navigation element. */
+  top: 0; /* Sets the top position to 0. */
+  margin-top: 20px; /* Adds a margin of 20px from the top. */
+  width: 100%; /* Sets the width to 100% of the parent container. */
 }
 
 ul {
-  float: left;
-  display: flex;
-  padding-top: 30px;
-  justify-content: center;
-  align-items: center;
-  margin-left: 15%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* The following lines modify the behavior and styling of the unordered list element: */
+  display: flex; /* Sets the display property to flex, allowing flexible positioning of child elements. */
+  justify-content: center; /* Centers child elements horizontally. */
+  align-items: center; /* Centers child elements vertically. */
 }
 
 ul li {
-  list-style: none;
-  margin: 0 30px;
-  font-size: 16px;
+  /* The following line is new and modifies the margin of list items: */
+  margin: 0 15px; /* Sets the left and right margin of list items to 15px. */
 }
 
 ul li a {
@@ -34,21 +56,16 @@ ul li a {
 }
 
 ul li a:hover {
-  color:  rgb(46, 24, 144);
+  color: rgb(46, 24, 144);
 }
 
 .title {
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  text-align: center;
+  margin-bottom: 100px;
 }
 
 .button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  text-align: center;
 }
 
 .btn {
@@ -65,9 +82,9 @@ ul li a:hover {
 }
 
 h1 {
-  text-align: center;
   margin-bottom: 20px;
   color: rgb(46, 24, 144);
+  font-size: 35px;
 }
 
 h2 {
@@ -80,10 +97,22 @@ p {
   margin: 0 0 10px;
 }
 
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+
+footer a {
+  text-decoration: none;
+  color:rgb(62, 169, 176);
+}
+
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  text-align: justify;
 }
 
 img {
@@ -96,22 +125,22 @@ img {
 
 @media (max-width: 768px) {
   ul {
-    float: none;
-    margin-left: 0;
-    justify-content: center;
+    flex-wrap: wrap;
   }
 
   ul li {
-    margin: 0 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .title {
-    top: 30%;
+    margin: 5px;
   }
 
-  .button {
-    top: 40%;
+  nav {
+    margin-bottom: 10px;
+  }
+
+  .title{
+    margin-bottom: 30px;
+  }
+
+  h1 {
+    font-size: 24px;
   }
 }
