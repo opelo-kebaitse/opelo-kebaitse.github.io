@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS Fundamentals</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../styles/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div class="container">
+    <h1>JS Fundamentals</h1>
+
+    <div class="section">
+      <h2>1. An analogy to describe JavaScript and its relationship to HTML and CSS</h2>
+      <p>
+        You can think of HTML and CSS as the pen and paper of web development. They provide the basic structure and presentation for a web page.
+      </p>
+      <img src="../images/pen-paper.jpeg" alt="Pen and Paper">
+      <p>
+        JavaScript, on the other hand, is like the writer who takes that pen and paper and brings the page to life. It adds interactivity, handles user actions, and makes the web page dynamic. So, HTML and CSS set the stage, while JavaScript does the storytelling.
+      </p>
+      <img src="../images/story-teller.jpeg" alt="Story teller">
+    </div>
+
+    <div class="section">
+      <h2>2. Explain control flow and loops using an example process from everyday life</h2>
+      <p>
+        Control flow refers to the way instructions in a program are followed. It allows you to decide what happens next based on certain conditions. It determines which parts of the program are run and in what order, depending on specific choices or conditions.
+      </p>
+      <p>
+        Control flow is like following a recipe with different steps, where you make choices based on certain conditions. Loops are like repeating a specific action until you reach a goal.
+      </p>
+      <p>
+        For making pancakes:
+      </p>
+      <p>
+        Control flow: You gather the ingredients, mix the batter, heat the pan, and cook the pancakes step by step.
+      </p>
+      <img src="../images/making-pancakes-part1.jpeg" alt="Pancakes Control Flow 1">
+      <br>
+      <img src="../images/making-pancakes-part2.jpeg" alt="Pancakes Control Flow 2">
+      <p>
+        Loop: You pour the batter, cook one pancake, flip it, and repeat this process until you've made the desired number of pancakes.
+      </p>
+      <img src="../images/english-pancakes-loop-complete.jpeg" alt="Pancakes Loop complete">
+    </div>
+
+    <div class="section">
+      <h2>3. Describe what the DOM is and an example of how you might interact with it.</h2>
+      <p>
+        The DOM (Document Object Model) is a programming interface for web documents. It represents the structure, style, and content of a web page, allowing programs to interact with and manipulate the document. The DOM views an HTML document as a tree of nodes, with each node representing an HTML element. This means that we can access and modify these elements programmatically using languages like CSS and JavaScript.
+      </p>
+      <p>
+        Interacting with the DOM involves accessing and manipulating the elements and their properties within a web page. Here's an example of how you might interact with the DOM:
+      </p>
+      <p>
+        Let's say we have an HTML document with a button element and we want to change its text when it's clicked. We can achieve this by using JavaScript to interact with the DOM.
+      </p>
+      <img src="../images/interacting-dom.png" alt="DOM Interaction">
+      <p>
+        In the example above, we first find the button element from the DOM using the <code>getElementById</code> method and assign it to the <code>button</code> variable. After, we add an event listener to the button, specifying that when it is clicked, a function should be executed. Inside the function, we modify the <code>textContent</code> property of the button to change its text to 'Clicked!'. This way, when the button is clicked, the text on the button will be updated accordingly.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>4. Explain the difference between accessing data from arrays and objects.</h2>
+      <p>
+        Arrays are ordered lists of values that can be accessed using numeric indices. The elements in an array are stored in a sequential manner and can be accessed using their position or index.
+      </p>
+      <p>
+        To access data from an array, you use square brackets (<code>[]</code>) and provide the index of the desired element.
+      </p>
+      <p>
+        Example:
+      </p>
+      <pre><code>let brands = ['Reebok', 'Nike', 'Adidas'];
+let secondBrand = brands[1];
+console.log(secondBrand); // Output: Nike</code></pre>
+      <p>
+        Objects are collections of key-value pairs and are not ordered. Data within an object is stored as properties, where each property has a key (name) and a corresponding value.
+      </p>
+      <p>
+        To access data from an object, you use dot notation (<code>objectName.propertyName</code>) or square brackets with the key (<code>objectName['propertyName']</code>).
+      </p>
+      <p>
+        Example:
+      </p>
+      <pre><code>let person = { name: 'Tessie', age: 23, city: 'Hamburg' };
+let personAge = person.age;
+console.log(personAge); // Output: 23</code></pre>
+    </div>
+
+    <div class="section">
+      <h2>5. Explain what functions are and why they are helpful.</h2>
+      <p>
+        A function is a reusable block of code created to perform a specific task. It is like a smaller program inside the main program. A function is made up of a group of statements, but when you use it, it runs as a single piece.
+      </p>
+      <p>
+        Functions let us package a block of code and use it again whenever we need it. They bring benefits like making JavaScript code easier to understand, keeping it organized, allowing us to reuse code, and making it simpler to maintain.
+      </p>
+      <img src="../images/functions.png" alt="Function Example">
+      <p>
+        In this example, the <code>calculateRectangleArea</code> function takes two parameters: <code>length</code> and <code>width</code>. It multiplies them together to calculate the area of the rectangle and stores the result in a variable called <code>area</code>. Finally, it returns the <code>area</code>.
+      </p>
+      <p>
+        By encapsulating the code for calculating the rectangle area within the function, we can reuse this functionality whenever we need to calculate the area of a rectangle in different parts of our program.
+      </p>
+    </div>
+  </div>
+  <footer>
+    <a href="../index.html">Back to Home</a>
+  </footer>
+</body>
+</html>
