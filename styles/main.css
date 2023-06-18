@@ -47,6 +47,7 @@ ul li {
   margin: 0 15px; /* Sets the left and right margin of list items to 15px. */
 }
 
+
 ul li a {
   text-decoration: none;
   color: aliceblue;
@@ -105,7 +106,7 @@ footer {
 
 footer a {
   text-decoration: none;
-  color:rgb(62, 169, 176);
+  color: rgb(62, 169, 176);
 }
 
 .container {
@@ -119,6 +120,37 @@ img {
   display: block;
   max-width: 100%;
   margin: 10px auto;
+}
+
+ul li .dropdown-content {
+  display: none;
+  position: absolute;
+  padding: 10px;
+}
+
+ul li:hover .dropdown-content {
+  display: block;
+}
+
+ul li .dropdown-content li {
+  display: block;
+  margin: 5px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
 }
 
 /* Media queries section */
@@ -136,7 +168,7 @@ img {
     margin-bottom: 10px;
   }
 
-  .title{
+  .title {
     margin-bottom: 30px;
   }
 
